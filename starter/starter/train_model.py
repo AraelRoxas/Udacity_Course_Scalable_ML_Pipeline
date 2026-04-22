@@ -4,8 +4,8 @@ Script to train machine learning model.
 # Add the necessary imports for the starter code.
 from sklearn.model_selection import train_test_split
 import pandas as pd
-from ml.data import process_data
-from ml.model import train_model, compute_model_metrics, inference
+from starter.ml.data import process_data
+from starter.ml.model import train_model, compute_model_metrics, inference
 import joblib
 
 # Add code to load in the data.
@@ -43,11 +43,3 @@ joblib.dump({
     "encoder": encoder,
     "lb": lb
 }, "starter/model/model.joblib")
-
-if __name__ == "__main__":
-
-    pred = inference(model_trained, X_test)
-    precision, recall, fbeta = compute_model_metrics(y_test, pred)
-    print(f"precision: {precision}")
-    print(f"recall: {recall}")
-    print(f"fbeta: {fbeta}")
