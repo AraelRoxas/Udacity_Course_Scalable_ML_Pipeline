@@ -76,6 +76,7 @@ def test_model_metric():
     pred = inference(model,X_test)
 
     precision, recall, fbeta = compute_model_metrics(y_test, pred)
+
     assert isinstance(precision, float), "metric not successful"
     assert isinstance(recall, float), "metric not successful"
     assert isinstance(fbeta, float), "metric not successful"

@@ -48,6 +48,7 @@ def compute_model_metrics(y, preds):
     fbeta = fbeta_score(y, preds, beta=1, zero_division=1)
     precision = precision_score(y, preds, zero_division=1)
     recall = recall_score(y, preds, zero_division=1)
+
     return precision, recall, fbeta
 
 
@@ -100,11 +101,9 @@ def model_slices(model, x, y, feature, output_file="starter/starter/slice_output
             # print + write
             line = (
                 f"Feature value: {fe}\n"
-                f"  precision: {precision}\n"
-                f"  recall:    {recall}\n"
-                f"  f1:        {fbeta}\n"
+                f"  precision: {precision:.2f}\n"
+                f"  recall:    {recall:.2f}\n"
+                f"  fbeta:     {fbeta:.2f}\n"
                 "-------------------------\n"
             )
-
-            print(line)
             f.write(line)
