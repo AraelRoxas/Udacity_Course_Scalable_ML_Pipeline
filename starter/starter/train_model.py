@@ -5,7 +5,7 @@ Script to train machine learning model.
 from sklearn.model_selection import train_test_split
 import pandas as pd
 from starter.ml.data import process_data
-from starter.ml.model import train_model, compute_model_metrics, inference
+from starter.ml.model import train_model, compute_model_metrics, inference, model_slices
 import joblib
 
 # Add code to load in the data.
@@ -43,3 +43,7 @@ joblib.dump({
     "encoder": encoder,
     "lb": lb
 }, "starter/model/model.joblib")
+
+# activate model slices
+feature = test["education"]
+model_slices(model_trained, X_test, y_test, feature)

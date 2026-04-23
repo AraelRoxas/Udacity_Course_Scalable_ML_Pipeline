@@ -1,0 +1,80 @@
+Feature value: HS-grad
+  precision: 0.647887323943662
+  recall:    0.4144144144144144
+  f1:        0.5054945054945055
+-------------------------
+Feature value: Assoc-voc
+  precision: 0.5882352941176471
+  recall:    0.4411764705882353
+  f1:        0.5042016806722689
+-------------------------
+Feature value: Bachelors
+  precision: 0.7741176470588236
+  recall:    0.7580645161290323
+  f1:        0.7660069848661234
+-------------------------
+Feature value: Some-college
+  precision: 0.6807511737089202
+  recall:    0.5471698113207547
+  f1:        0.606694560669456
+-------------------------
+Feature value: 11th
+  precision: 0.8
+  recall:    0.36363636363636365
+  f1:        0.5
+-------------------------
+Feature value: 9th
+  precision: 0.0
+  recall:    0.0
+  f1:        0.0
+-------------------------
+Feature value: 5th-6th
+  precision: 1.0
+  recall:    0.16666666666666666
+  f1:        0.2857142857142857
+-------------------------
+Feature value: Masters
+  precision: 0.7740384615384616
+  recall:    0.8609625668449198
+  f1:        0.8151898734177215
+-------------------------
+Feature value: Assoc-acdm
+  precision: 0.7333333333333333
+  recall:    0.559322033898305
+  f1:        0.6346153846153846
+-------------------------
+Feature value: 10th
+  precision: 0.5384615384615384
+  recall:    0.5
+  f1:        0.5185185185185185
+-------------------------
+Feature value: Prof-school
+  precision: 0.813953488372093
+  recall:    0.9210526315789473
+  f1:        0.8641975308641975
+-------------------------
+Feature value: 7th-8th
+  precision: 1.0
+  recall:    0.25
+  f1:        0.4
+-------------------------
+Feature value: Doctorate
+  precision: 0.896551724137931
+  recall:    0.8
+  f1:        0.8455284552845529
+-------------------------
+Feature value: 12th
+  precision: 0.6666666666666666
+  recall:    0.3333333333333333
+  f1:        0.4444444444444444
+-------------------------
+Feature value: Preschool
+  precision: 1.0
+  recall:    1.0
+  f1:        1.0
+-------------------------
+Feature value: 1st-4th
+  precision: 1.0
+  recall:    0.0
+  f1:        0.0
+-------------------------

@@ -68,3 +68,43 @@ def inference(model, X):
     pred = model.predict(X)
 
     return pred
+
+def model_slices(model, x, y, feature, output_file="starter/starter/slice_output.txt"):
+    """ Run model slices and create a txt file slice_output.txt
+
+    Inputs
+    ------
+    model: trained model
+    X: features
+    y: labels
+    feature: slicing feature
+    """
+
+    with open(output_file, "w") as f:
+
+        for fe in feature.unique():
+            # slice data
+            X_slice = x[feature == fe]
+            y_slice = y[feature == fe]
+
+            # skip empty slice
+            if len(y_slice) == 0:
+                continue
+
+            # predict
+            preds = inference(model, X_slice)
+
+            # metrics
+            precision, recall, fbeta = compute_model_metrics(y_slice, preds)
+
+            # print + write
+            line = (
+                f"Feature value: {fe}\n"
+                f"  precision: {precision}\n"
+                f"  recall:    {recall}\n"
+                f"  f1:        {fbeta}\n"
+                "-------------------------\n"
+            )
+
+            print(line)
+            f.write(line)

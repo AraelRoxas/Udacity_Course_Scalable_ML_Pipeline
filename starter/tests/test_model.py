@@ -81,4 +81,7 @@ def test_model_metric():
     assert isinstance(fbeta, float), "metric not successful"
     assert precision>0.5, "precision too low"
 
+def test_model_slice():
+    """ test of model slice and save in slice_output.txt with feature education"""
+    assert os.path.exists("starter/starter/slice_output.txt"), "slice output is not saved"
 
