@@ -1,17 +1,17 @@
 # Put the code for your API here.
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
 import numpy as np
+import os
+from starter.src import train_model
 from starter.src.ml.model import inference
 
 app = FastAPI(root_path="/proxy/8000")
 
-md = joblib.load("starter/model/model.joblib")
-model = md["model"]
-encoder = md["encoder"]
-lb = md["lb"]
+if not os.path.exists("starter/model/model.joblib"):
+    train_model.model_save()
 
 
 class CensusData(BaseModel):
@@ -60,7 +60,11 @@ def read_root():
 
 # POST
 @app.post("/predict")
-def predict(data: CensusData):
+def predict(request: Request, data: CensusData):
+    md = joblib.load("starter/model/model.joblib")
+    model = md["model"]
+    encoder = md["encoder"]
+
     input_dict = data.model_dump(by_alias=True)
     df = pd.DataFrame([input_dict])
 

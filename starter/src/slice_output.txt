@@ -1,76 +1,76 @@
-Feature value: 10th
-  precision: 0.75
-  recall:    0.25
-  fbeta:     0.38
--------------------------
-Feature value: Bachelors
-  precision: 0.75
-  recall:    0.73
-  fbeta:     0.74
+Feature value: Masters
+  precision: 0.86
+  recall:    0.78
+  fbeta:     0.82
 -------------------------
 Feature value: Some-college
-  precision: 0.64
-  recall:    0.55
-  fbeta:     0.59
+  precision: 0.69
+  recall:    0.48
+  fbeta:     0.57
+-------------------------
+Feature value: Bachelors
+  precision: 0.74
+  recall:    0.70
+  fbeta:     0.72
+-------------------------
+Feature value: 7th-8th
+  precision: 1.00
+  recall:    0.30
+  fbeta:     0.46
 -------------------------
 Feature value: HS-grad
-  precision: 0.60
-  recall:    0.41
-  fbeta:     0.48
+  precision: 0.62
+  recall:    0.40
+  fbeta:     0.49
+-------------------------
+Feature value: Doctorate
+  precision: 0.79
+  recall:    0.91
+  fbeta:     0.85
 -------------------------
 Feature value: 11th
-  precision: 0.78
-  recall:    0.58
-  fbeta:     0.67
--------------------------
-Feature value: 12th
   precision: 1.00
-  recall:    0.33
-  fbeta:     0.50
+  recall:    0.29
+  fbeta:     0.44
 -------------------------
 Feature value: 5th-6th
   precision: 1.00
-  recall:    0.00
-  fbeta:     0.00
+  recall:    1.00
+  fbeta:     1.00
 -------------------------
-Feature value: Masters
-  precision: 0.77
-  recall:    0.81
-  fbeta:     0.79
+Feature value: 10th
+  precision: 0.44
+  recall:    0.40
+  fbeta:     0.42
 -------------------------
 Feature value: Assoc-acdm
-  precision: 0.65
-  recall:    0.44
-  fbeta:     0.52
--------------------------
-Feature value: Prof-school
-  precision: 0.87
-  recall:    0.93
-  fbeta:     0.90
--------------------------
-Feature value: Doctorate
-  precision: 0.71
-  recall:    0.95
-  fbeta:     0.81
--------------------------
-Feature value: 1st-4th
-  precision: 0.00
-  recall:    0.00
-  fbeta:     0.00
--------------------------
-Feature value: 9th
-  precision: 1.00
-  recall:    0.00
-  fbeta:     0.00
+  precision: 0.70
+  recall:    0.59
+  fbeta:     0.64
 -------------------------
 Feature value: Assoc-voc
   precision: 0.75
-  recall:    0.67
-  fbeta:     0.71
+  recall:    0.45
+  fbeta:     0.56
 -------------------------
-Feature value: 7th-8th
-  precision: 0.67
-  recall:    0.22
+Feature value: 1st-4th
+  precision: 1.00
+  recall:    1.00
+  fbeta:     1.00
+-------------------------
+Feature value: 12th
+  precision: 0.75
+  recall:    0.60
+  fbeta:     0.67
+-------------------------
+Feature value: Prof-school
+  precision: 0.87
+  recall:    0.94
+  fbeta:     0.90
+-------------------------
+Feature value: 9th
+  precision: 1.00
+  recall:    0.20
   fbeta:     0.33
 -------------------------
 Feature value: Preschool

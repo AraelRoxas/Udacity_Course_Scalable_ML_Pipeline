@@ -74,7 +74,7 @@ def inference(model, X):
 
 
 def model_slices(model, x, y, feature,
-                 output_file="starter/starter/slice_output.txt"):
+                 output_file="starter/src/slice_output.txt"):
     """ Run model slices and create a txt file slice_output.txt
 
     Inputs
