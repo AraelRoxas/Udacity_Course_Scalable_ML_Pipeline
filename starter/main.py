@@ -4,10 +4,10 @@ from pydantic import BaseModel, Field, ConfigDict
 import joblib
 import pandas as pd
 import numpy as np
-from starter.ml.model import inference
-from starter.ml.data import process_data
+from starter.starter.ml.model import inference
+from starter.starter.ml.data import process_data
 
-app = FastAPI()
+app = FastAPI(root_path="/proxy/8000")
 md = joblib.load("starter/model/model.joblib")
 model = md["model"]
 encoder = md["encoder"]
@@ -29,10 +29,9 @@ class CensusData(BaseModel):
     hours_per_week: int = Field(...,alias = "hours-per-week")
     native_country: str = Field(...,alias = "native-country")
 
-    model_config = ConfigDict(
-        populate_by_name = True,
-        json_schema_extra = {
-            "example": {'age': 39,
+    model_config = {
+        "json_schema_extra" : {
+            "example": [{'age': 39,
                         'workclass': 'State-gov',
                         'fnlgt': 77516,
                         'education': 'Bachelors',
@@ -46,9 +45,9 @@ class CensusData(BaseModel):
                         'ca50Kpital-loss': 0,
                         'hours-per-week': 40,
                         'native-country': 'United-States'
-            }
+            }]
         }
-    )
+    }
 
 # GET
 @app.get("/")
