@@ -1,10 +1,16 @@
 """
 Pytest for api
 """
+import pytest
 from fastapi.testclient import TestClient
 from starter.main import app
 
 client = TestClient(app)
+
+
+@pytest.fixture(scope="module")
+def model_train():
+    train_model
 
 
 def test_get_root():
