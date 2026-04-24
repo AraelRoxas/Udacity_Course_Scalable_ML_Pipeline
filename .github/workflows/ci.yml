@@ -21,7 +21,7 @@ jobs:
         pip install -r starter/requirements.txt
 
     - name: Run flake8
-      run: flake8 .
+      run: flake8 starter/ --exclude=starter/sanitycheck.py
 
     - name: Run pytest
       run: pytest

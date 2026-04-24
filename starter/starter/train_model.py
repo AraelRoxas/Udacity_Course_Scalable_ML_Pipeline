@@ -5,14 +5,15 @@ Script to train machine learning model.
 from sklearn.model_selection import train_test_split
 import pandas as pd
 from starter.ml.data import process_data
-from starter.ml.model import train_model, compute_model_metrics, inference, model_slices
+from starter.ml.model import train_model, model_slices
 import joblib
 
 # Add code to load in the data.
 DATA_PATH = "starter/data/census.csv"
 data = pd.read_csv(DATA_PATH)
 
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+# Optional enhancement, use K-fold cross validation
+# instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20)
 
 cat_features = [
