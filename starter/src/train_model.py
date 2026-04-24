@@ -4,8 +4,8 @@ Script to train machine learning model.
 # Add the necessary imports for the starter code.
 from sklearn.model_selection import train_test_split
 import pandas as pd
-from starter.ml.data import process_data
-from starter.ml.model import train_model, model_slices
+from src.ml.data import process_data
+from src.ml.model import train_model, model_slices
 import joblib
 
 # Add code to load in the data.

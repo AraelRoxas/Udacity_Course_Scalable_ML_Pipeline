@@ -4,8 +4,8 @@ Pytest for model train and inference
 import os
 import numpy as np
 import pandas as pd
-from starter.ml.data import process_data
-from starter.ml.model import train_model, compute_model_metrics, inference
+from starter.src.ml.data import process_data
+from starter.src.ml.model import train_model, compute_model_metrics, inference
 from sklearn.model_selection import train_test_split
 import joblib
 
@@ -86,5 +86,5 @@ def test_model_metric():
 
 def test_model_slice():
     """ test of model slice and save in slice_output.txt"""
-    assert os.path.exists("starter/starter/slice_output.txt"), (
+    assert os.path.exists("starter/src/slice_output.txt"), (
         "slice output is not saved")

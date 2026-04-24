@@ -4,14 +4,11 @@ from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
 import numpy as np
-from starter.ml.model import inference
-from pathlib import Path
+from starter.src.ml.model import inference
 
 app = FastAPI(root_path="/proxy/8000")
 
-BASE_DIR = Path(__file__).resolve().parent
-model_path = BASE_DIR / "model" / "model.joblib"
-md = joblib.load(model_path)
+md = joblib.load("starter/model/model.joblib")
 model = md["model"]
 encoder = md["encoder"]
 lb = md["lb"]
