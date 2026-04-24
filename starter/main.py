@@ -5,9 +5,13 @@ import joblib
 import pandas as pd
 import numpy as np
 from starter.ml.model import inference
+from pathlib import Path
 
 app = FastAPI(root_path="/proxy/8000")
-md = joblib.load("starter/model/model.joblib")
+
+BASE_DIR = Path(__file__).resolve().parent
+model_path = BASE_DIR / "model" / "model.joblib"
+md = joblib.load(model_path)
 model = md["model"]
 encoder = md["encoder"]
 lb = md["lb"]
