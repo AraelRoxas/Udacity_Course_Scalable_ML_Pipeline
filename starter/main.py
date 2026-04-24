@@ -32,7 +32,7 @@ class CensusData(BaseModel):
 
     model_config = {
         "json_schema_extra": {
-            "example": [{
+            "example": {
                 'age': 39,
                 'workclass': 'State-gov',
                 'fnlgt': 77516,
@@ -47,7 +47,7 @@ class CensusData(BaseModel):
                 'ca50Kpital-loss': 0,
                 'hours-per-week': 40,
                 'native-country': 'United-States'
-            }]
+            }
         }
     }
 
@@ -60,7 +60,7 @@ def read_root():
 
 # POST
 @app.post("/predict")
-def predict(request: Request, data: CensusData):
+def predict(data: CensusData):
     md = joblib.load("starter/model/model.joblib")
     model = md["model"]
     encoder = md["encoder"]
