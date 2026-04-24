@@ -1,5 +1,5 @@
 # Put the code for your API here.
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
