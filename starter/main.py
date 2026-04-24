@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
 import numpy as np
-from starter.starter.ml.model import inference
+from starter.ml.model import inference
 
 app = FastAPI(root_path="/proxy/8000")
 md = joblib.load("starter/model/model.joblib")
